@@ -56,9 +56,9 @@ useEffect(()=>{
             name={sourceCurrency} 
             value={sourceCurrency}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" >
-              <option value={sourceCurrency}>select source currency</option>
+              
               {Object.keys(currencyNames).map((currency)=>(
-                <option className="p-1" key={currency} value={currency}>
+                <option value={sourceCurrency} className="p-1" key={currency} value={currency}>
                   {currencyNames[currency]}
                 </option>
               ))}
@@ -75,7 +75,11 @@ useEffect(()=>{
             name={targetCurrency} 
             value={targetCurrency}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" >
-              <option value="">select Target currency</option>
+             {Object.keys(currencyNames).map((currency)=>(
+                <option value={sourceCurrency} className="p-1" key={currency} value={currency}>
+                  {currencyNames[currency]}
+                </option>
+              ))}
             </select>
           </div>
 
